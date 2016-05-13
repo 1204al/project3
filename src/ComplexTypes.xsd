@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/ComplexTypes"
+	xmlns:tns="http://www.example.org/ComplexTypes"
+	elementFormDefault="qualified"
+	xmlns:pref="http://www.example.org/SimpleTypes" xmlns:pref1="http://www.example.org/Candy">
+
+	<import schemaLocation="SimpleTypes.xsd"
+		namespace="http://www.example.org/SimpleTypes">
+	</import>
+	
+	<complexType name="valueType">
+		<sequence>
+			<element name="proteins" type="pref:g"></element>
+			<element name="carbohydrates" type="pref:g"></element>
+			<element name="fats" type="pref:g"></element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="ingredients">
+		<sequence>
+			<element name="water" type="pref:mg"></element>
+			<element name="sugar" type="pref:mg"></element>
+			<element name="fructosa" type="pref:mg"></element>
+			<element name="vanilin" type="pref:mg"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="typeCandy">
+		<sequence>
+			<element name="kind">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="карамель"></enumeration>
+						<enumeration value="ирис"></enumeration>
+						<enumeration value="шоколадная"></enumeration>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="filling" type="boolean"></element>
+		</sequence>
+	</complexType>
+</schema>

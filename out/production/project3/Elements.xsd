@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/Candy"
+	xmlns:tns="http://www.example.org/Candy" elementFormDefault="qualified"
+	xmlns:pref="http://www.example.org/ComplexTypes" xmlns:pref1="http://www.example.org/SimpleTypes">
+
+	<import schemaLocation="ComplexTypes.xsd"
+		namespace="http://www.example.org/ComplexTypes">
+	</import>
+	<import schemaLocation="SimpleTypes.xsd" namespace="http://www.example.org/SimpleTypes"></import>
+	<element name="name" type="string"></element>
+
+
+
+
+	<element name="candy">
+		<complexType>
+			<sequence>
+				<element name="item" minOccurs="1" maxOccurs="unbounded" type="tns:itemCandy"></element>
+			</sequence>
+		</complexType></element>
+
+
+
+	<element name="production" type="string"></element>
+
+
+
+	<complexType name="itemCandy">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="production" type="string"></element>
+			<element name="energy" type="pref1:energyType"></element>
+			<element name="ingredients" type="pref:ingredients"></element>
+			<element name="value" type="pref:valueType"></element>
+			<element name="type" type="pref:typeCandy"></element>
+		</sequence>
+		<attribute name="ID" type="int"></attribute>
+	</complexType>
+
+
+
+
+
+	
+</schema>

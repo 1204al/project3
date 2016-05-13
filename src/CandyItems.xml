@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:candy xmlns:tns="http://www.example.org/Candy" xmlns:tns1="http://www.example.org/SimpleTypes" xmlns:tns2="http://www.example.org/ComplexTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Candy Elements.xsd ">
+  <tns:item ID="1">
+    <tns:name>Світоч цукерки</tns:name>
+    <tns:production>Світоч Фабрика</tns:production>
+    <tns:energy>11ккал</tns:energy>
+    <tns:ingredients>
+      <tns2:water>10мг</tns2:water>
+      <tns2:sugar>12мг</tns2:sugar>
+      <tns2:fructosa>50мг</tns2:fructosa>
+      <tns2:vanilin>12мг</tns2:vanilin>
+
+    </tns:ingredients>
+    <tns:value>
+      <tns2:proteins>11г</tns2:proteins>
+      <tns2:carbohydrates>15г</tns2:carbohydrates>
+      <tns2:fats>21г</tns2:fats>
+    </tns:value>
+    <tns:type>
+	    <tns2:kind>шоколадная</tns2:kind>
+	    <tns2:filling>true</tns2:filling>
+    </tns:type>
+  </tns:item>
+  
+  
+  <tns:item ID="2">
+    <tns:name>Корона цукерки</tns:name>
+    <tns:production>Корона Фабрика</tns:production>
+    <tns:energy>41ккал</tns:energy>
+    <tns:ingredients>
+      <tns2:water>50мг</tns2:water>
+      <tns2:sugar>5мг</tns2:sugar>
+      <tns2:fructosa>50мг</tns2:fructosa>
+      <tns2:vanilin>2мг</tns2:vanilin>
+      
+    </tns:ingredients>
+    <tns:value>
+      <tns2:proteins>11г</tns2:proteins>
+      <tns2:carbohydrates>15г</tns2:carbohydrates>
+      <tns2:fats>51г</tns2:fats>
+    </tns:value>
+    <tns:type>
+	    <tns2:kind>карамель</tns2:kind>
+	    <tns2:filling>false</tns2:filling>
+    </tns:type>
+  </tns:item>
+  
+  <tns:item ID="3">
+    <tns:name>Рошен цукерки</tns:name>
+    <tns:production>Рошен Фабрика</tns:production>
+    <tns:energy>71ккал</tns:energy>
+    <tns:ingredients>
+      <tns2:water>100мг</tns2:water>
+      <tns2:sugar>112мг</tns2:sugar>
+      <tns2:fructosa>5мг</tns2:fructosa>
+      <tns2:vanilin>2мг</tns2:vanilin>
+      
+    </tns:ingredients>
+    <tns:value>
+      <tns2:proteins>111г</tns2:proteins>
+      <tns2:carbohydrates>125г</tns2:carbohydrates>
+      <tns2:fats>21г</tns2:fats>
+    </tns:value>
+    <tns:type>
+	    <tns2:kind>ирис</tns2:kind>
+	    <tns2:filling>true</tns2:filling>
+    </tns:type>
+  </tns:item>
+
+</tns:candy>
