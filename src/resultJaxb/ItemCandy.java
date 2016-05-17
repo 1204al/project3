@@ -5,7 +5,11 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -25,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="value" type="{http://www.example.org/ComplexTypes}valueType"/>
  *         &lt;element name="type" type="{http://www.example.org/ComplexTypes}typeCandy"/>
  *       &lt;/sequence>
- *       &lt;attribute name="ID" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -56,8 +60,11 @@ public class ItemCandy {
     protected ValueType value;
     @XmlElement(namespace = "http://www.example.org/Candy", required = true)
     protected TypeCandy type;
-    @XmlAttribute(name = "ID")
-    protected Integer id;
+    @XmlAttribute(name = "id")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlID
+    @XmlSchemaType(name = "ID")
+    protected String id;
 
     /**
      * Gets the value of the name property.
@@ -208,10 +215,10 @@ public class ItemCandy {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
-    public Integer getID() {
+    public String getId() {
         return id;
     }
 
@@ -220,10 +227,10 @@ public class ItemCandy {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
-    public void setID(Integer value) {
+    public void setId(String value) {
         this.id = value;
     }
 

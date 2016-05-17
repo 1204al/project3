@@ -11,42 +11,42 @@ public class Main {
         HTMLBuilder builder=new HTMLBuilder();
         builder.buildHTML("src/CandyItems.xsl","src/CandyItems.xml","src/CandyItems.html");
 
-//        XMLValidator validator = new XMLValidator();
-//        validator.validate("src/CandyItems.xml", "src/Elements.xsd");
-//
-//        Candy candyItems;
-//        candyItems = Parser.SAXParsing("src/CandyItems.xml");
-//        for (int i = 0; i < candyItems.getItem().size(); i++) {
-//            System.out.println(candyItems.getItem().get(i).getEnergy());
-//        }
-//        for (int i = 0; i < candyItems.getItem().size(); i++) {
-//            System.out.println(candyItems.getItem().get(i).getName());
-//        }
-//        System.out.println();
-//        sortByParameter(candyItems,"name");
-//        for (int i = 0; i < candyItems.getItem().size(); i++) {
-//            System.out.println(candyItems.getItem().get(i).getEnergy());
-//        }
-//        for (int i = 0; i < candyItems.getItem().size(); i++) {
-//            System.out.println(candyItems.getItem().get(i).getName());
-//        }
-//
-//
-//
-//        System.out.println();
-//        System.out.println();
-//
-//        candyItems = Parser.DOMParsing("src/CandyItems.xml");
-//        for (int i = 0; i < candyItems.getItem().size(); i++) {
-//            System.out.println(candyItems.getItem().get(i).getEnergy());
-//        }
-//
-//        System.out.println();
-//        System.out.println();
-//        candyItems=Parser.StAXParsing("src/CandyItems.xml");
-//        for (int i = 0; i < candyItems.getItem().size(); i++) {
-//            System.out.println(candyItems.getItem().get(i).getIngredients().getSugar());
-//        }
+        XMLValidator validator = new XMLValidator();
+        validator.validate("src/CandyItems.xml", "src/Elements.xsd");
+
+        Candy candyItems;
+        candyItems = Parser.SAXParsing("src/CandyItems.xml");
+        for (int i = 0; i < candyItems.getItem().size(); i++) {
+            System.out.println(candyItems.getItem().get(i).getEnergy());
+        }
+        for (int i = 0; i < candyItems.getItem().size(); i++) {
+            System.out.println(candyItems.getItem().get(i).getName());
+        }
+        System.out.println();
+        sortByParameter(candyItems,"name");
+        for (int i = 0; i < candyItems.getItem().size(); i++) {
+            System.out.println(candyItems.getItem().get(i).getEnergy());
+        }
+        for (int i = 0; i < candyItems.getItem().size(); i++) {
+            System.out.println(candyItems.getItem().get(i).getName());
+        }
+
+
+
+        System.out.println();
+        System.out.println();
+
+        candyItems = Parser.DOMParsing("src/CandyItems.xml");
+        for (int i = 0; i < candyItems.getItem().size(); i++) {
+            System.out.println(candyItems.getItem().get(i).getEnergy());
+        }
+
+        System.out.println();
+        System.out.println();
+        candyItems=Parser.StAXParsing("src/CandyItems.xml");
+        for (int i = 0; i < candyItems.getItem().size(); i++) {
+            System.out.println(candyItems.getItem().get(i).getIngredients().getSugar());
+        }
     }
 
     public static void sortByParameter(Candy candyItems,String parameter){

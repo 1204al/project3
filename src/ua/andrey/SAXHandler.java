@@ -36,7 +36,7 @@ public class SAXHandler extends DefaultHandler {
         currEl = qName;
         if (currEl.equals("tns:item")) {
             itemCandy = new ItemCandy();
-            itemCandy.setID(Integer.valueOf(attributes.getValue(0)));
+            itemCandy.setId(attributes.getValue(0));
         }
         if (currEl.equals("tns:ingredients")) {
             ingredients = new Ingredients();

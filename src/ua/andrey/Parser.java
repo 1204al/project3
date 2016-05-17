@@ -48,8 +48,8 @@ public class Parser {
             for (int i = 0; i < items.getLength(); i++) {
                 ItemCandy itemCandy = new ItemCandy();
                 Element item = (Element) items.item(i);
-                itemCandy.setID(Integer.valueOf(item.getAttribute("ID")));
-                ;
+                itemCandy.setId(item.getAttribute("id"));
+
 
                 itemCandy.setName(item.getElementsByTagName("tns:name").item(0).getFirstChild().getNodeValue());
 
@@ -123,7 +123,7 @@ public class Parser {
                     case XMLStreamReader.START_ELEMENT:
                         if ((streamReader.getLocalName()).equals("item")) {
                             itemCandy = new ItemCandy();
-                            itemCandy.setID(Integer.valueOf(streamReader.getAttributeValue(0)));
+                            itemCandy.setId(streamReader.getAttributeValue(0));
                         }
                         if ((streamReader.getLocalName()).equals("ingredients")) {
                             ingredients = new Ingredients();

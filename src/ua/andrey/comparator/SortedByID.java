@@ -8,6 +8,6 @@ public class SortedByID implements Comparator<ItemCandy>{
 
     @Override
     public int compare(ItemCandy o1, ItemCandy o2) {
-        return o1.getID().compareTo(o1.getID());
+        return o1.getId().compareTo(o1.getId());
     }
 }

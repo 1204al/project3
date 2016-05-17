@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tns:candy xmlns:tns="http://www.example.org/Candy" xmlns:tns1="http://www.example.org/SimpleTypes" xmlns:tns2="http://www.example.org/ComplexTypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Candy Elements.xsd ">
-  <tns:item ID="1">
+  <tns:item id="candy_1">
     <tns:name>Світоч цукерки</tns:name>
     <tns:production>Світоч Фабрика</tns:production>
     <tns:energy>11ккал</tns:energy>
@@ -23,7 +23,7 @@
   </tns:item>
   
   
-  <tns:item ID="2">
+  <tns:item id="candy_2">
     <tns:name>Корона цукерки</tns:name>
     <tns:production>Корона Фабрика</tns:production>
     <tns:energy>41ккал</tns:energy>
@@ -45,7 +45,7 @@
     </tns:type>
   </tns:item>
   
-  <tns:item ID="3">
+  <tns:item id="candy_3">
     <tns:name>Рошен цукерки</tns:name>
     <tns:production>Рошен Фабрика</tns:production>
     <tns:energy>71ккал</tns:energy>
